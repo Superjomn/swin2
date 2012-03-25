@@ -1,0 +1,86 @@
+digraph G {
+    fontname="Microsoft YaHei";
+    label="单爬虫线程内逻辑图";
+
+    /* Reptile */
+    subgraph cluster0 {
+        node[shape=hexagon, color=red];
+        Reptile_urlInQueue[label="urlInQueue"];
+        Reptile_urlist[label="urlist"];
+        Reptile_urlQueue[label="urlQueue"];
+        node[shape=box, color=blue];
+        Reptile_init[label="init"];
+        Reptile_conn[label="conn"];
+        Reptile_requestSource[label="requestSource"];
+        Reptile_getPage[label="getPage"];
+        Reptile_getImg[label="getImg"];
+        Reptile_getImgList[label="getImgList"];
+
+        Reptile_urlQueue -> Reptile_getPage[label="url"];
+        /* self */
+        label="Reptile";
+        style=filled;
+        color=lightgrey;
+    };
+
+    /*HtmlParser*/
+    subgraph cluster1 {
+        /*self*/
+        label="HtmlParser";
+        style=filled;
+        color=tan;
+        /*node*/
+        node[shape=box, color=blue];
+        /*init[label="init"];*/
+        HtmlParser_getLinks[label="getLinks"];
+        HtmlParser_getSrcs[label="getSrcs"];
+        HtmlParser_transStdUrl[label="transStdSrc"];
+        HtmlParser_transPath[label="transPath"];
+        HtmlParser_getXML[label="getXML"];
+    };
+
+    /*ImgParser*/
+    subgraph cluster2{
+        /*self*/
+        label="ImgParser";
+        style=filled;
+        color="limegreen";
+        node[shape=box, color=blue];
+        ImgParser_compress[label="compress"];
+    };
+    
+    /*models*/
+    subgraph cluster3 {
+        label="models";
+        style=filled;
+        color=yellow;
+        node[shape=box, color=blue];
+        models_Html[label="Html"];
+        models_Img[label="Img"];
+    };
+
+    /*request html source*/
+    Reptile_getPage -> Reptile_requestSource[style=dotted];
+    Reptile_requestSource -> Reptile_conn[label="refresh conn"];
+
+    /*get and save html source*/
+    Reptile_getPage -> HtmlParser_getXML[label="html\nsource"];
+    HtmlParser_getXML -> models_Html[label="save\nhtml\nxml"];
+
+    /*get srcs and save img*/
+    Reptile_getImgList -> HtmlParser_getSrcs;
+    HtmlParser_getSrcs -> HtmlParser_transStdUrl[style=dotted];
+    HtmlParser_transPath -> Reptile_getImg[label="path"];
+    Reptile_getImg -> Reptile_requestSource[style=dotted];
+    Reptile_requestSource -> Reptile_conn[style=dotted];
+    Reptile_getImg -> ImgParser_compress[label="img"];
+    ImgParser_compress -> models_Img[label="save\nimg\nsource"];
+
+
+    /*links*/
+    Reptile_getPage -> HtmlParser_getLinks[label="html\nsource"];
+    HtmlParser_getLinks -> HtmlParser_transStdUrl[style=dotted];
+    HtmlParser_transStdUrl -> HtmlParser_transPath[style=dotted];
+    HtmlParser_transPath -> Reptile_urlist;
+    Reptile_urlist -> Reptile_urlInQueue[label="new\npath"];
+};

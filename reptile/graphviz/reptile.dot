@@ -1,0 +1,42 @@
+digraph G{
+    node[shape=box, color=blue];
+
+    CentreServ[label="CentreServ"];
+    ClientServ[label="ClientServ"];
+
+    UserFace[label="UserFace"];
+
+    CentreServ -> ClientServ[label="XML Message"];
+    ClientServ -> CentreServ[label="XML Message"];
+    UserFace -> CentreServ[label="Queue Message"];
+    CentreServ -> UserFace[label="Queue Message"];
+
+    ReptileLib[label="ReptileLib"];
+    ClientCtrl[label="ClientCtrl"];
+
+    ClientServ -> ReptileLib[label="Queue Message"];
+    ReptileLib -> ClientCtrl[label="Queue Message"];
+    ClientCtrl -> ClientServ[label="Queue Message"];
+
+    ReptileLib -> Reptile1;
+    ReptileLib -> Reptile2;
+    ReptileLib -> Reptile3;
+    ReptileLib -> Reptile4;
+    
+
+    Reptile1[label="Reptile"];
+    Reptile2[label="Reptile"];
+    Reptile3[label="Reptile"];
+    Reptile4[label="Reptile"];
+
+    DataBase[label="DataBase"];
+
+    Reptile1 -> DataBase;
+    Reptile2 -> DataBase;
+    Reptile3 -> DataBase;
+    Reptile4 -> DataBase;
+
+
+
+
+};
