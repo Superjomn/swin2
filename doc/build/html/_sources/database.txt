@@ -1,0 +1,59 @@
+.. highlightlang:: python
+
+数据库设计
+============
+
+*******************
+Introduction
+*******************
+
+本系统外存信息均采用数据库存储，利用Sqlite单文件存储。
+
+
+Includes
+=============
+***********
+html_info
+***********
+
+html源码的存储
+
+html_info::
+
+    id
+    siteid
+    title
+
+***********
+html_source
+***********
+html源代码的存储::
+
+    id
+    source
+
+***********
+img_info
+***********
+图片信息的存储::
+
+    id
+    docid
+    siteid
+    url
+
+**********
+img_source
+**********
+图片二进制源码的存储::
+
+    id
+    source
+
+
+
+
+
+
+
+

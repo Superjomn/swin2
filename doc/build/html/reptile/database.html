@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>数据库设计 &mdash; Swin 1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Swin 1 documentation" href="../index.html" />
+    <link rel="up" title="爬虫模块设计" href="index.html" />
+    <link rel="next" title="CentreServ 中央控制服务器" href="CentreServ.html" />
+    <link rel="prev" title="ReptileLib 爬虫库设计" href="reptilelib/reptile.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="CentreServ.html" title="CentreServ 中央控制服务器"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="reptilelib/reptile.html" title="ReptileLib 爬虫库设计"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Swin 1 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">爬虫模块设计</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">数据库设计</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#id2">数据库结构</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="reptilelib/reptile.html"
+                        title="previous chapter">ReptileLib 爬虫库设计</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="CentreServ.html"
+                        title="next chapter">CentreServ 中央控制服务器</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/reptile/database.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="id1">
+<h1>数据库设计<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>本系统外存信息均采用数据库存储，利用Sqlite单文件存储。我们在设计的时候，特别注意了整个系统的结构简洁性，这体现在数据库设计上，单文件及操作的高度抽象。</p>
+</div>
+<div class="section" id="id2">
+<h2>数据库结构<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">此部分采用Sqlite及Django的数据库层进行存储和操作。</p>
+</div>
+<p>site_info:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nb">id</span>
+<span class="n">title</span>
+<span class="n">url</span>
+</pre></div>
+</div>
+<p>html_info:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nb">id</span>
+<span class="n">siteid</span>      <span class="c">#标志不同的网站</span>
+<span class="n">title</span>
+</pre></div>
+</div>
+<p>html_source:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nb">id</span>
+<span class="n">source</span>
+<span class="n">parsed_source</span>
+</pre></div>
+</div>
+<p>img_info:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nb">id</span>
+<span class="n">docid</span>
+<span class="n">siteid</span>
+<span class="n">url</span>
+</pre></div>
+</div>
+<p>img_source:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nb">id</span>
+<span class="n">source</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="CentreServ.html" title="CentreServ 中央控制服务器"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="reptilelib/reptile.html" title="ReptileLib 爬虫库设计"
+             >previous</a> |</li>
+        <li><a href="../index.html">Swin 1 documentation</a> &raquo;</li>
+          <li><a href="index.html" >爬虫模块设计</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Chunwei.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

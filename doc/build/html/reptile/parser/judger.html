@@ -1,0 +1,149 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>class Judger &mdash; Swin 1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Swin 1 documentation" href="../../index.html" />
+    <link rel="up" title="解析库设计" href="index.html" />
+    <link rel="prev" title="Class HtmlParser" href="htmlparser.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="htmlparser.html" title="Class HtmlParser"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Swin 1 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >爬虫模块设计</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">解析库设计</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="htmlparser.html"
+                        title="previous chapter">Class HtmlParser</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/reptile/parser/judger.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-judger">
+<span id="class-judger"></span><h1>class Judger<a class="headerlink" href="#module-judger" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="judger.Judger">
+<em class="property">class </em><tt class="descclassname">judger.</tt><tt class="descname">Judger</tt><a class="headerlink" href="#judger.Judger" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="judger.__homeUrls">
+<tt class="descclassname">judger.</tt><tt class="descname">__homeUrls</tt><a class="headerlink" href="#judger.__homeUrls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="judger.transToStdUrl">
+<tt class="descclassname">judger.</tt><tt class="descname">transToStdUrl</tt><big>(</big><em>homeurl</em>, <em>newUrl</em><big>)</big><a class="headerlink" href="#judger.transToStdUrl" title="Permalink to this definition">¶</a></dt>
+<dd><p>将任意一个url转化为绝对地址</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="judger.transSiteID">
+<tt class="descclassname">judger.</tt><tt class="descname">transSiteID</tt><big>(</big><em>url</em><big>)</big><a class="headerlink" href="#judger.transSiteID" title="Permalink to this definition">¶</a></dt>
+<dd><p>返回url属于的siteID</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="judger.transPath">
+<tt class="descclassname">judger.</tt><tt class="descname">transPath</tt><big>(</big><em>pageStdUrl</em>, <em>url</em><big>)</big><a class="headerlink" href="#judger.transPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>将一个网页内的任意一个url转化为path，将会先转化为绝对url，然后转化为路径</p>
+<p>最终结果可以直接用于conn，request source。</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="judger.judgeUrl">
+<tt class="descclassname">judger.</tt><tt class="descname">judgeUrl</tt><big>(</big><em>pageUrl</em>, <em>newUrl</em><big>)</big><a class="headerlink" href="#judger.judgeUrl" title="Permalink to this definition">¶</a></dt>
+<dd><p>判断一个url是否在收录范围内
+如果在，则返回对应站点id</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="htmlparser.html" title="Class HtmlParser"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Swin 1 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >爬虫模块设计</a> &raquo;</li>
+          <li><a href="index.html" >解析库设计</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Chunwei.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
