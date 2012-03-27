@@ -21,5 +21,6 @@ Contents:
    :maxdepth: 2
 
    reptilelib/index.rst
-   parser/index.rst
+   sourceparser/index.rst
+   datalayer/index.rst
 

@@ -5,6 +5,7 @@ class HtmlInfo(models.Model):
     url = models.URLField(max_length=150)
     date = models.DateField()
 
-class Html(models.Model):
-    content = models.TextField()
+class HtmlSource(models.Model):
+    source = models.TextField()
+    parsed_source = models.TextField()
     info = models.ForeignKey(HtmlInfo)

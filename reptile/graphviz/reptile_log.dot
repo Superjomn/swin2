@@ -59,8 +59,12 @@ digraph G {
         models_Img[label="Img"];
     };
 
-    /*judger*/
+    /*datalayer*/
     subgraph cluster4{
+        label="datalayer";
+        style=filled;
+        node[shape=box, color=blue];
+        datalayer_saveHtml[label="saveHtml"];
     };
 
     /*request html source*/
@@ -69,7 +73,8 @@ digraph G {
 
     /*get and save html source*/
     Reptile_getPage -> HtmlParser_getXML[label="html\nsource"];
-    HtmlParser_getXML -> models_Html[label="save\nhtml\nxml"];
+    HtmlParser_getXML -> datalayer_saveHtml;
+    datalayer_saveHtml->models_Html[label="save\nhtml\nxml"];
 
     /*get srcs and save img*/
     Reptile_getImgList -> HtmlParser_getSrcs;
@@ -80,7 +85,6 @@ digraph G {
     Reptile_getImg -> ImgParser_compress[label="img"];
     ImgParser_compress -> models_Img[label="save\nimg\nsource"];
 
-
     /*links*/
     Reptile_getPage -> HtmlParser_getLinks[label="html\nsource"];
     HtmlParser_getLinks -> HtmlParser_transStdUrl[style=dotted];
@@ -88,3 +92,5 @@ digraph G {
     HtmlParser_transPath -> Reptile_urlist;
     Reptile_urlist -> Reptile_urlInQueue[label="new\npath"];
 };
+
+    

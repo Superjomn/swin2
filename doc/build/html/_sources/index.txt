@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
    reptile/index.rst
+   datalist/index.rst
 
 
 

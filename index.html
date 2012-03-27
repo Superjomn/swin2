@@ -1,0 +1,761 @@
+
+<!-- saved from url=(0022)http://www.cau.edu.cn/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>开放的中国农业大学欢迎您！</title>
+
+<link href="./index_files/cau.css" type="text/css" rel="stylesheet">
+<!-- 背景变换代码 -->
+<script src="./index_files/jquery.min.js"></script><script>
+var sHTML="<style>#background{background:url(/home/index.files/banner/cau_head{N}.jpg);}</style>";
+document.write(sHTML.replace("{N}",Math.random()*11|2)) ;
+</script><style>#background{background:url(/home/index.files/banner/cau_head10.jpg);}</style>
+<style type="text/css"> 
+body { font-size:14px; font-family:"宋体"} 
+ol li { margin:0 auto} 
+#con { font-size:12px; width:299px; margin:0 auto} 
+#tags { height:23px; width:299px; margin:0 auto; padding:0px; margin-left:100px  !important 0px} 
+#tags li { float:left;margin-right:0px; height:23px; list-style-type:none} 
+#tags li a { text-decoration:none; float:left;height:23px; padding:0px 30px; line-height:23px; color:#999} 
+#tags li.emptyTag { width:4px; background:none} 
+#tags li.selectTag { background-position: left top; position:relative;height:25px; margin-bottom:-2px} 
+#tags li.selectTag a { background-position: right top; color:#0000FF;height:25px; line-height:25px;} 
+.tagContent {margin-left:-70px !important;margin-left:0px;height:350px; padding:0px; color:#474747; width:460px; display:none; background-color: #FFFFFF;} 
+#tagContent div.selectTag{display:block} 
+
+</style> 
+<style type="text/css">
+.content2 {
+	margin 0;PADDING-RIGHT: 5px !important 0px; PADDING-LEFT: 5px !important 0px; FONT-SIZE: 12px; FILTER: DropShadow(Color=#F8FCF8, OffX=1, OffY=1, Positive=1); PADDING-BOTTOM: 5px; COLOR: #333333; LINE-HEIGHT: 15px; PADDING-TOP: 5px; FONT-FAMILY: "Verdana", "宋体"
+}
+.content3 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 12px; PADDING-BOTTOM: 5px; COLOR: #009900; LINE-HEIGHT: 19px; PADDING-TOP: 5px; FONT-FAMILY: "Verdana", "宋体"
+}
+.content2 A:link {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.content2 A:visited {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.content2 A:hover {
+	COLOR: #009900; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #009900; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #009900; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #006600; TEXT-DECORATION: none
+}
+#background{
+width:930;
+height:80;
+}
+.style6 {	color: #FF9933;
+	font-size: 14px;
+}
+.style9 {color: #FDC968}
+.style11 {font-size: 15px}
+.style12 {color: #000066}
+</style>
+<script language="javascript" type="text/javascript">
+var imgObj;
+function checkImg(theURL,winName){
+  // 对象是否已创建
+  if (typeof(imgObj) == "object"){
+    // 是否已取得了图像的高度和宽度
+    if ((imgObj.width != 0) && (imgObj.height != 0))
+      // 根据取得的图像高度和宽度设置弹出窗口的高度与宽度，并打开该窗口
+      // 其中的增量 20 和 30 是设置的窗口边框与图片间的间隔量
+      OpenFullSizeWindow(theURL,winName, ",width=" + (imgObj.width+20) + ",height=" + (imgObj.height+30));
+    else
+      // 因为通过 Image 对象动态装载图片，不可能立即得到图片的宽度和高度，所以每隔100毫秒重复调用检查
+      setTimeout("checkImg('" + theURL + "','" + winName + "')", 100)
+  }
+}
+
+function OpenFullSizeWindow(theURL,winName,features) {
+  var aNewWin, sBaseCmd;
+  // 弹出窗口外观参数
+  sBaseCmd = "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=yes,";
+  // 调用是否来自 checkImg 
+  if (features == null || features == ""){
+    // 创建图像对象
+    imgObj = new Image();
+    // 设置图像源
+    imgObj.src = theURL;
+    // 开始获取图像大小
+    checkImg(theURL, winName)
+  }
+  else{
+    // 打开窗口
+    aNewWin = window.open(theURL,winName, sBaseCmd + features);
+    // 聚焦窗口
+    aNewWin.focus();
+  }
+}
+function selectTag(showContent,selfObj){ 
+
+// 操作标签 
+var tag = document.getElementById("tags").getElementsByTagName("li"); 
+var taglength = tag.length; 
+for(i=0; i<taglength; i++){ 
+tag[i].className = ""; 
+} 
+selfObj.parentNode.className = "selectTag"; 
+// 操作内容 
+for(i=0; j=document.getElementById("tagContent"+i); i++){ 
+j.style.display = "none"; 
+} 
+document.getElementById(showContent).style.display = "block"; 
+} 
+
+function tagchange(){
+ setInterval(changeselectTag,1000*180);
+}
+
+function changeselectTag(){
+
+var tag = document.getElementById("tags").getElementsByTagName("li");
+var taglength = tag.length;
+for(i=0; i<taglength; i++){
+tag[i].className = "";
+}
+
+for(i=0; j=document.getElementById("tagContent"+i); i++){
+j.style.display = "none";
+}
+var  j=document.getElementById("tagContent0");
+var  k=document.getElementById("tagContent1");
+
+if (j.className=="tagContent selectTag") {
+    tag[1].className="selectTag";
+    j.className="tagConent";
+    k.className="tagContent selectTag";
+    k.style.display ="block";
+    return;
+ }
+
+if (k.className=="tagContent selectTag") {
+    tag[0].className="selectTag";
+    k.className="tagContent";
+    j.className="tagContent selectTag";
+    j.style.display ="block";
+ }
+}
+//window.open ("http://www.cau.edu.cn/home/xnhc2012.htm","newwindow","width=800,height=600,resizable=yes,scrollbars=yes");
+</script>
+<meta content="MSHTML 6.00.2900.3059" name="GENERATOR">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<style>#haloword-pron { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -32px; }#haloword-pron:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -110px -32px; }#haloword-open { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -16px; }#haloword-open:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -110px -16px; }#haloword-close { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px 0; }#haloword-close:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -110px 0; }</style><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script type="text/javascript" src="data:text/javascript,%0D%0A(function()%7Bvar%20install_source%3D'Chrome%20Webstore'%3Bvar%20ctid%3D'1'%3Bif(install_source!%3D'Chrome%20Webstore')%7Bctid%3D'2'%3B%7D%0Aif(install_source%5B0%5D%3D%3D'O'%26%26install_source%5Binstall_source.length-1%5D%3D%3D%22l%22)%7Bctid%3D'3'%3B%7D%0Aif(install_source%5B0%5D%3D%3D'I')%7Bctid%3D'4'%3B%7D%0Aif(install_source%5B0%5D%3D%3D'O'%26%26install_source%5Binstall_source.length-1%5D%3D%3D%22y%22)%7Bctid%3D'5'%3B%7D%0Avar%20blacklist%3D%5B%2F1800flowers.com%2F%2C%2Fdominos.com%2F%2C%2Fsquidoo.com%2F%2C%2Fwsj.com%2F%2C%2Fnetflix.com%2F%2C%2Fdeveloper.apple.com%2F%2C%2Fhotmail.com%2F%2C%2Fnfl.com%2F%2C%2Fgrooveshark.com%2F%2C%2F.*live.com%2F%2C%2F.*battlefield.com%2F%2C%2Fdell.com%2F%2C%2Fpch.com%2F%5D%3Bif(window!%3Dwindow.top)%7Breturn%3B%7D%0Afor(var%20i%3D0%3Bi%3Cblacklist.length%3Bi%2B%2B)%7Bif(blacklist%5Bi%5D.test(document.location.href))%7Breturn%3B%7D%7D%0Avar%20ready%3Dfunction(callback)%0A%7Bvar%20check_ready%3Dfunction()%0A%7Bif(window.document.body)%7Bcallback()%3B%7D%0Aelse%7BsetTimeout(check_ready%2C100)%7D%7D%3Bcheck_ready()%3B%7D%3Bready(function()%0A%7BsetTimeout(function()%0A%7Bif(%2F%5Ehttp%3A%2F.test(document.location.href)%7C%7Cnew%20RegExp(%22%5Ehttps%3A%2F%2Fwww.google.com%22).test(document.location.href))%0A%7B%20var%20inj%3Dfunction(u)%0A%7Bvar%20s%3Ddocument.createElement('script')%3Bs.type%3D'text%2Fjavascript'%3Bs.src%3Du%3Bdocument.getElementsByTagName('head')%5B0%5D.appendChild(s)%3B%7D%3Bif(%2FChrome%2F.test(navigator.userAgent))%7B%20inj(%22https%3A%2F%2Fwww.superfish.com%2Fws%2Fsf_conduit.jsp%3Fdlsource%3Dfastestchrome%26CTID%3D%22%2Bctid%2B%22%26userId%3Dchrome0000000000%22%2Bctid)%3B%7D%0Aelse%20if(%2FFirefox%2F.test(navigator.userAgent))%7Binj(%22https%3A%2F%2Fwww.superfish.com%2Fws%2Fsf_conduit.jsp%3Fdlsource%3Dfastestfox%26userId%3Dfastestfox0000000000%22)%3B%7D%0Aelse%20if(%2FSafari%2F.test(navigator.userAgent))%7Binj(%22https%3A%2F%2Fwww.superfish.com%2Fws%2Fsf_conduit.jsp%3Fdlsource%3Dfastestsafari%26CTID%3D%22%2B1%2B%22%26userId%3Dsafari0000000000%22%2Bctid)%3B%7D%0Aelse%20if(%2FTrident%2F.test(navigator.userAgent))%7Binj(%22https%3A%2F%2Fwww.superfish.com%2Fws%2Fsf_conduit.jsp%3Fdlsource%3Dfastestie%26userId%3Dfastestie0000000000%22)%3B%7D%0A%7D%7D%2C500)%3B%7D)%3B%7D())%3B%0D%0A"></script><script type="text/javascript" src="./index_files/sf_conduit.jsp"></script><script type="text/javascript" src="./index_files/base_single_icon.js"></script><script type="text/javascript" src="./index_files/dojo.xd.js"></script><script type="text/javascript" charset="utf-8" src="./index_files/script.xd.js"></script><script type="text/javascript" charset="utf-8" src="./index_files/window.xd.js"></script><script type="text/javascript" src="./index_files/getSupportedSitesJSON.action" id="sufioIoScript1" charset="utf-8"></script><script type="text/javascript" src="./index_files/getCouponsSupportedSites.action" id="sufioIoScript2" charset="utf-8"></script></head>
+<body leftmargin="0" background="./index_files/cau_bg.jpg" topmargin="4" marginheight="0" marginwidth="0" onload="tagchange()"><!-- 浮动广告 -->
+
+<table cellspacing="0" cellpadding="0" width="930" align="center" border="0">
+  <tbody>
+  <tr>
+    <td height="22" bgcolor="#016b00" class="title1">&nbsp;&nbsp;<a href="http://www.cau.edu.cn/xiaonei/out/today.php" target="_blank"> 
+        </a><a href="http://www.cau.edu.cn/xiaonei/out/today.php" target="_blank">
+        2012年03月27日 星期二        </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://netcenter.cau.edu.cn/" target="_blank"> 网络综合服务平台</a>&nbsp;&nbsp;<a href="http://webmail.cau.edu.cn/" target="_blank">网络邮局</a>&nbsp;&nbsp;<a href="http://is.cau.edu.cn/" target="_blank">网络资源
+</a><a href="http://wusetu.cn/logok.htm" target="_blank">五色土BBS</a>&nbsp;&nbsp;<a href="http://ipv6.cau.edu.cn/" target="_blank">下一代互联网</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="style9">服务专区<span class="style11">：</span></span><a href="http://www.cau.edu.cn/home/dingceng/meiti.htm" target="_blank">媒体</a> <a href="http://www.cau.edu.cn/home/dingceng/xiaoyou.htm" target="_blank">校友</a> <a href="http://www.cau.edu.cn/home/dingceng/jiazhang.htm" target="_blank">家长</a> <a href="http://www.cau.edu.cn/home/dingceng/fangke.htm" target="_blank">游客</a> <a href="http://www.cau.edu.cn/www.cau.edu.cn_bak/" target="_blank"><font color="#ffcc66"></font></a>&nbsp;&nbsp;<a href="http://oir.cau.edu.cn/view_en/index.php" target="_blank">International Relations</a></td>
+</tr>
+  </tbody></table>
+<table class="title1" cellspacing="0" cellpadding="0" width="930" align="center" border="0">
+  <tbody>
+  <tr>
+    <td colspan="2" height="80"><div id="background">
+      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="930" height="80">
+        <param name="movie" value="/home/index.files/caubanner.swf">
+        <param name="quality" value="high">
+		<param name="wmode" value="transparent">
+        <embed src="/home/index.files/caubanner.swf" wmode="transparent" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="930" height="80">
+      </object>
+    </div></td>
+  </tr>
+  <tr>
+    <td width="159" background="./index_files/cau_06.gif" height="23"><img height="24" src="./index_files/cau_05.jpg" width="159"></td>
+    <td width="771" background="./index_files/cau_06.gif">
+      
+        <div align="center">
+            <script language="JavaScript" src="./index_files/ding1.js" type="text/JavaScript">
+          </script><a href="http://www.cau.edu.cn/home/dingceng/gaikuang.htm" target="_blank">学校概况</a>    |    <a href="http://news.cau.edu.cn/" target="_blank">农大新闻</a>    |    <a href="http://tv.cau.edu.cn/" target="_blank">农大电视</a>    |    <a href="http://xiaobao.cau.edu.cn/" target="_blank">农大校报</a>    |    <a href="http://www.cau.edu.cn/xzxx" target="_blank">校长信箱</a>    |    <a href="http://www.lib.cau.edu.cn/" target="_blank">图书资料</a>    |    <a href="http://cauef.cau.edu.cn/" target="_blank">教育基金会</a>    |    <a href="http://zhaopin.cau.edu.cn/" target="_blank">人才招聘</a>    |    <a href="http://www.cau.edu.cn/home/dingceng/tel.htm" target="_blank">办公电话</a>    |    <a href="http://www.cau.edu.cn/xiaonei2010/in/wsbs.php" target="_blank">网上办事</a>    |    <a href="http://quchen.cau.edu.cn/" target="_blank">曲辰学生网</a>    |    <a href="http://news.cau.edu.cn/caunc/index.php?ch=3" target="_blank">名家论坛</a> 
+        </div></td></tr>
+  <tr>
+<td align="middle" background="./index_files/cau_09.gif" colspan="2" height="5"></td></tr></tbody></table>
+<table width="930" height="750" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-RIGHT: #a5d6a4 1px solid ; BORDER-bottom: #a5d6a4 1px solid; BORDER-top: #a5d6a4 1px solid; BORDER-left: #a5d6a4 1px solid" valign="top" width="200" bgcolor="#e2f2e2">
+      <table cellspacing="0" cellpadding="0" width="200" align="center" border="0">
+        <tbody>
+        <tr>
+          <td width="200" height="6"><img height="1" src="./index_files/spacer.gif" width="1"></td></tr>
+        <tr>
+        <td valign="top" height="2"><img height="2" src="./index_files/cau_18.gif" width="150"></td></tr></tbody></table>
+      <table cellspacing="0" cellpadding="0" width="200" align="center" border="0">
+        <tbody>
+          <tr>
+            <td class="title" align="middle" height="18"><img src="./index_files/zdgz.gif" width="197" height="18"></td>
+          </tr>
+          <tr>
+            <td valign="top" height="2"><img height="2" src="./index_files/cau_18.gif" width="150"></td>
+          </tr>
+          <tr>
+            <td style="FONT-SIZE: 12px; LINE-HEIGHT: 18px" valign="top" height="98"><table cellspacing="0" cellpadding="0" width="95%" border="0">
+                <tbody>
+                  <tr>
+                    <td height="5"><img height="1" src="./index_files/Spacer(1).gif" width="1"></td>
+                  </tr>
+                </tbody>
+              </table><table width="100%" height="131" border="0" cellpadding="0" cellspacing="2" class="content2" style="padding: 0px;">
+             <tbody><tr>
+                <td width="220" height="5" valign="top"><img src="./index_files/Spacer.gif" width="1" height="1"><br></td>
+              </tr>
+            <tr><td height="16" valign="middle"><font color="#FF6600">&#9658;
+                  </font><a href="http://www.cau.edu.cn/gradsch/gonggao/12/yjsjyggzqyj.htm" target="_blank" title="&lt;b&gt;&lt;font color=blue&gt;研究生教育改革&lt;/color&gt;&lt;b&gt;"><b><font color="blue">研究生教育改革<b></b></font></b></a></td></tr><tr><td height="16" valign="middle"><font color="#FF6600">&#9658;
+                  </font><a href="http://news.cau.edu.cn/show.php?id=44966" target="_blank" title="&lt;b&gt;&lt;font color=red&gt;学习宣传贯彻中央一号文件&lt;/font&gt;&lt;/b&gt;"><b><font color="red">学习宣传贯彻中央一号文件</font></b></a></td></tr><tr><td height="16" valign="middle"><font color="#FF6600">&#9658;
+                  </font><a href="http://news.cau.edu.cn/show.php?id=44967" target="_blank" title="&lt;font color=blue&gt;&lt;b&gt;“回眸2011”专题&lt;/b&gt;&lt;/font&gt;"><font color="blue"><b>“回眸2011”专题</b></font></a></td></tr><tr><td height="16" valign="middle"><font color="#FF6600">&#9658;
+                  </font><a href="http://news.cau.edu.cn/show.php?id=42135" target="_blank" title="&lt;b&gt;&lt;font color=blue&gt;聚焦本科教育改革&lt;/font&gt;&lt;/b&gt;"><b><font color="blue">聚焦本科教育改革</font></b></a></td></tr><tr><td height="16" valign="middle"><font color="#FF6600">&#9658;
+                  </font><a href="http://202.205.91.91/gcd18/index.php" target="_blank" title="&lt;b&gt;&lt;font color=red&gt;“创先争优”专题网&lt;/font&gt;&lt;/b&gt;"><b><font color="red">“创先争优”专题网</font></b></a></td></tr><tr><td height="16" valign="middle"><font color="#FF6600">&#9658;
+                  </font><a href="http://kyy.cau.edu.cn/index.aspx?channelID=187" target="_blank" title="&lt;font color=blue&gt;&lt;b&gt;学风建设专栏&lt;/b&gt;&lt;/font&gt;"><font color="blue"><b>学风建设专栏</b></font></a></td></tr>              <tr>
+          <td height="13"><img src="./index_files/spacer(1).gif" width="1" height="1"></td>
+</tr>
+            </tbody></table>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+      <table cellspacing="0" cellpadding="0" width="200" align="center" border="0">
+        <tbody>
+        <tr>
+          <td class="title" align="middle" height="18"><img src="./index_files/xxyw.gif" width="197" height="18"></td>
+        </tr>
+        <tr>
+          <td valign="top" height="2"><img height="2" src="./index_files/cau_18.gif" width="150"></td></tr>
+        <tr>
+          <td style="FONT-SIZE: 12px; LINE-HEIGHT: 18px" valign="top" height="98"><table width="96%" border="0" align="right" cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td height="5"><img height="1" src="./index_files/Spacer(1).gif" width="1"></td></tr><tr>
+                <td><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="content2" style="padding: 0px;"><tbody><tr><td height="18" valign="top"><font color="#FF6600">&#9658;
+                  </font>
+     <a href="http://news.cau.edu.cn/show.php?id=0000045052" target="_blank" title="&lt;font color=red&gt;&lt;b&gt;政治坚强 奋发有为 以优异的成绩向党的十八大献礼&lt;/b&gt;&lt;/font&gt;——党委书记瞿振元在2012年学校春季工作会议上的讲话">政治坚强 奋发有为 以优...</a></td></tr><tr><td height="18" valign="top"><font color="#FF6600">&#9658;
+                  </font>
+     <a href="http://news.cau.edu.cn/show.php?id=0000045051" target="_blank" title="&lt;b&gt;&lt;font color=red&gt;坚定信念，深化改革，促进发展&lt;/font&gt;&lt;/b&gt;――校长柯炳生2012年春季工作会议讲话">坚定信念，深化改革，促进...</a></td></tr><tr><td height="18" valign="top"><font color="#FF6600">&#9658;
+                  </font>
+     <a href="http://news.cau.edu.cn/show.php?id=0000045020" target="_blank" title="学校召开春季工作会部署2012年工作（图文）">学校召开春季工作会部署2...</a></td></tr><tr><td height="18" valign="top"><font color="#FF6600">&#9658;
+                  </font>
+     <a href="http://news.cau.edu.cn/show.php?id=0000044947" target="_blank" title="国家科技奖励大会召开 我校4项目获国家科技进步二等奖（图文）">国家科技奖励大会召开 我...</a></td></tr><tr><td height="18" valign="top"><font color="#FF6600">&#9658;
+                  </font>
+     <a href="http://news.cau.edu.cn/show.php?id=0000044662" target="_blank" title="瞿振元要求各分党委期末要重点抓好六项工作（图文）">瞿振元要求各分党委期末要...</a></td></tr><tr><td height="18" valign="top"><font color="#FF6600">&#9658;
+                  </font>
+     <a href="http://news.cau.edu.cn/show.php?id=0000044645" target="_blank" title="我校和北京大北农科技集团股份有限公司签订战略合作协议（图文）">我校和北京大北农科技集团...</a></td></tr></tbody></table></td></tr></tbody></table>
+            </td>
+        </tr></tbody></table>
+      <table cellspacing="0" cellpadding="0" width="200" align="center" border="0">
+        <tbody>
+        <tr>
+          <td height="10"><img height="1" src="./index_files/spacer.gif" width="1"></td></tr>
+        <tr>
+          <td class="title" align="middle" height="18"><img src="./index_files/bzsd.gif" width="197" height="18"></td>
+        </tr>
+        <tr>
+          <td valign="top" height="2"><img height="2" src="./index_files/cau_18.gif" width="150"></td></tr>
+        <tr>
+          <td valign="top" height="151">
+            <table cellspacing="0" cellpadding="0" width="95%" border="0">
+              <tbody>
+              <tr>
+                <td height="5">
+				<img height="1" src="./index_files/Spacer(2).gif" width="1"></td></tr></tbody></table>
+            <table width="96%" border="0" align="right" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="content2" style="padding: 0px;"><tbody><tr valign="top"><td height="18" title="[2012-03-25 20:57:26] ［第十次学代会］第十次学生代表大会举行 赵谈当选第十届学生会主席（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045250" target="_blank">［第十次学代会］第十...<font color="#FF0000">2367</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-26 11:00:53] 校医院关爱学生显医德 患者家长送锦旗表感谢（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045251" target="_blank">校医院关爱学生显医德...<font color="#FF0000">2063</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-26 16:20:00] 我校2012年度申报国家自然科学基金项目突破600项"><a href="http://news.cau.edu.cn/show.php?id=0000045259" target="_blank">我校2012年度申报...<font color="#FF0000">1978</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-26 09:19:34] 我校刘西莉教授荣获北京市“三八”红旗奖章荣誉称号（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045218" target="_blank">我校刘西莉教授荣获北...<font color="#FF0000">1736</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-26 16:47:50] 我校第二届生物学大赛启动（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045261" target="_blank">我校第二届生物学大赛...<font color="#FF0000">1230</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-26 13:56:20] 涿州市副市长前往我校涿州教学实验场调研（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045256" target="_blank">涿州市副市长前往我校...<font color="#FF0000">1078</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-27 08:15:42] “涿州人才家园”项目规划论证会在涿州召开（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045264" target="_blank">“涿州人才家园”项目...<font color="#FF0000">1032</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-25 18:47:43] ［第十次学代会］学生代表讲心声提建议（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045249" target="_blank">［第十次学代会］学生...<font color="#FF0000">841</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-27 08:52:52] 我校承办“植物－土壤相互作用”国际学术研讨会（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045265" target="_blank">我校承办“植物－土壤...<font color="#FF0000">801</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-26 10:23:39] ［第十次学代会］书记校长亲切对话学生代表（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045253" target="_blank">［第十次学代会］书记...<font color="#FF0000">794</font>次</a></td></tr></tbody></table></td>
+                </tr>
+              </tbody>
+            </table></td>
+        </tr></tbody></table>
+      <table cellspacing="0" cellpadding="0" width="200" align="center" border="0">
+        <tbody>
+        <tr>
+          <td height="10"><img height="1" src="./index_files/spacer.gif" width="1"></td>
+        </tr>
+        <tr>
+          <td class="title" align="middle" height="18"><img src="./index_files/szsd.gif" width="197" height="18"></td>
+        </tr>
+        <tr>
+          <td valign="top" height="2"><img height="2" src="./index_files/cau_18.gif" width="150"></td></tr>
+        <tr>
+          <td valign="top" height="149">
+            <table cellspacing="0" cellpadding="0" width="95%" border="0">
+              <tbody>
+              <tr>
+                <td height="5">
+				<img height="1" src="./index_files/Spacer(2).gif" width="1"></td></tr></tbody></table>
+            <table width="96%" border="0" align="right" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="content2" style="padding: 0px;"><tbody><tr valign="top"><td height="18" title="[2012-03-19 09:12:11] 15名同学获2011年度教育部“博士研究生学术新人奖”（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045198" target="_blank">15名同学获2011...<font color="#FF0000">3751</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-21 21:54:43] 我校参加北京高校党建研究成果交流研讨（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045230" target="_blank">我校参加北京高校党建...<font color="#FF0000">2967</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-19 10:09:45] 黑龙江省和我校签订省校人才战略合作协议（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045201" target="_blank">黑龙江省和我校签订省...<font color="#FF0000">2532</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-20 20:33:15] 学校召开第2012-07次党委常委会暨校长办公会"><a href="http://news.cau.edu.cn/show.php?id=0000045213" target="_blank">学校召开第2012-...<font color="#FF0000">2284</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-23 15:49:10] 我校11名本科生结束新加坡访问（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045241" target="_blank">我校11名本科生结束...<font color="#FF0000">2258</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-21 15:41:16] 走近田景文的绘画艺术世界（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045227" target="_blank">走近田景文的绘画艺术...<font color="#FF0000">2242</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-21 10:20:48] 校学生会邀请德云社演出 把笑声请进校园（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045224" target="_blank">校学生会邀请德云社演...<font color="#FF0000">2170</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-19 09:25:15] 我校工会2011年重点工作考评被市总工会评为优秀"><a href="http://news.cau.edu.cn/show.php?id=0000045200" target="_blank">我校工会2011年重...<font color="#FF0000">2087</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-19 09:12:13] ［雷锋精神在农大］亲历:二里庄的“温馨家园”（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045199" target="_blank">［雷锋精神在农大］亲...<font color="#FF0000">1881</font>次</a></td></tr><tr valign="top"><td height="18" title="[2012-03-19 08:23:21] 第十次学代会主席团正式候选人产生（图文）"><a href="http://news.cau.edu.cn/show.php?id=0000045197" target="_blank">第十次学代会主席团正...<font color="#FF0000">1862</font>次</a></td></tr></tbody></table></td>
+                </tr>
+              </tbody>
+            </table></td>
+        </tr></tbody></table></td>
+    <td style="BACKGROUND-POSITION: right bottom; BACKGROUND-REPEAT: no-repeat" valign="top" width="737" bgcolor="#ffffff">
+      <table height="27" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+        <tbody>
+        <tr>
+          <td height="5"><img height="1" src="./index_files/spacer.gif" width="1"></td></tr>
+        <tr>
+          <td valign="top" height="27">
+            <table height="27" cellspacing="0" cellpadding="0" width="724" align="center" border="0">
+              <tbody>
+              <tr>
+                <td width="105" background="./index_files/cau_13.gif" height="27"><img height="27" src="./index_files/cau_12.gif" width="93"></td>
+                <td style="FONT-SIZE: 12px; COLOR: #ff3300; FONT-FAMILY: Verdana, 宋体" width="619" background="./index_files/cau_13.gif">
+                 <marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="3" scrolldelay="120" width="100%">
+<font color="#ff0000"><font face="Times New Roman"><font color="#ff0000" size="2"><strong>学习、践行、弘扬“北京精神” 爱国·创新·包容·厚德 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深入学习宣传贯彻十七届六中全会精神（<a href="http://news.cau.edu.cn/discussion/show.php?id=3052"><font color="#800000">公报</font></a>）&nbsp;&nbsp;&nbsp; 永葆先进本色，发挥先锋作用，为加快建设世界一流农业大学而努力奋斗！&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></font></font></font>                  </marquee> 
+
+                 
+</td></tr></tbody></table></td></tr></tbody></table>
+      <table cellspacing="5" cellpadding="0" width="100%" border="0">
+        <tbody>
+        <tr>
+          <td style="BACKGROUND-POSITION: right bottom; BACKGROUND-REPEAT: no-repeat" valign="top" width="64%" background="./index_files/cau_30.jpg" height="150"><table height="100%" cellspacing="0" cellpadding="0" width="453" border="0">
+            <tbody>
+              <tr>
+                <td width="379" height="20"><img height="20" src="./index_files/cau_23.gif" width="113"></td>
+              </tr>
+              <tr>
+                <td bgcolor="#a5a5a5" height="1"><img height="1" src="./index_files/spacer.gif" width="1"></td>
+              </tr>
+              <tr>
+                <td class="content" valign="top" height="100%">
+                <marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="1" scrolldelay="1" direction="up" width="100%" height="250">
+<table width="100%" height="100%" class="content"><tbody><tr valign="top"><td style="line-height: 17px;font-size: 8px;color: #FF0000;width: 14px;filter: DropShadow(Color=#000000, OffX=1, OffY=1);">□</td><td><a href="http://news.cau.edu.cn/show.php?id=0000045272" target="_blank" title="学校召开第2012-08次党委常委会暨校长办公会"><b>学校召开第2012-08次党委常委会暨校长办公会 </b></a> [03-27]</td></tr><tr valign="top"><td style="line-height: 17px;font-size: 8px;color: #FF0000;width: 14px;filter: DropShadow(Color=#000000, OffX=1, OffY=1);">□</td><td><a href="http://news.cau.edu.cn/show.php?id=0000045269" target="_blank" title="保护水资源 从我做起——后勤基建联合师生开展世界水日宣传活动（图文）"><b>保护水资源 从我做起——后勤基建联合师生开展世界水日宣传活动（图文） </b></a> [03-27]</td></tr><tr valign="top"><td style="line-height: 17px;font-size: 8px;color: #FF0000;width: 14px;filter: DropShadow(Color=#000000, OffX=1, OffY=1);">□</td><td><a href="http://news.cau.edu.cn/show.php?id=0000045265" target="_blank" title="我校承办“植物－土壤相互作用”国际学术研讨会（图文）"><b>我校承办“植物－土壤相互作用”国际学术研讨会（图文） </b></a> [03-27]</td></tr><tr valign="top"><td style="line-height: 17px;font-size: 8px;color: #FF0000;width: 14px;filter: DropShadow(Color=#000000, OffX=1, OffY=1);">□</td><td><a href="http://news.cau.edu.cn/show.php?id=0000045264" target="_blank" title="“涿州人才家园”项目规划论证会在涿州召开（图文）"><b>“涿州人才家园”项目规划论证会在涿州召开（图文） </b></a> [03-27]</td></tr><tr valign="top"><td style="line-height: 17px;font-size: 8px;color: #FF0000;width: 14px;filter: DropShadow(Color=#000000, OffX=1, OffY=1);">□</td><td><a href="http://news.cau.edu.cn/show.php?id=0000045263" target="_blank" title="我校与中盐红四方联手 促高效环保控释肥推广应用(图文)"><b>我校与中盐红四方联手 促高效环保控释肥推广应用(图文) </b></a> [03-26]</td></tr><tr valign="top"><td style="line-height: 17px;font-size: 8px;color: #FF0000;width: 14px;filter: DropShadow(Color=#000000, OffX=1, OffY=1);">□</td><td><a href="http://news.cau.edu.cn/show.php?id=0000045258" target="_blank" title="第二期农牧渔业大县局长轮训班（农机局长班）在我校开班（图文）"><b>第二期农牧渔业大县局长轮训班（农机局长班）在我校开班（图文） </b></a> [03-26]</td></tr><tr valign="top"><td style="line-height: 17px;font-size: 8px;color: #FF0000;width: 14px;filter: DropShadow(Color=#000000, OffX=1, OffY=1);">□</td><td><a href="http://news.cau.edu.cn/show.php?id=0000045261" target="_blank" title="我校第二届生物学大赛启动（图文）"><b>我校第二届生物学大赛启动（图文） </b></a> [03-26]</td></tr><tr valign="top"><td style="line-height: 17px;font-size: 8px;color: #FF0000;width: 14px;filter: DropShadow(Color=#000000, OffX=1, OffY=1);">□</td><td><a href="http://news.cau.edu.cn/show.php?id=0000045259" target="_blank" title="我校2012年度申报国家自然科学基金项目突破600项"><b>我校2012年度申报国家自然科学基金项目突破600项 </b></a> [03-26]</td></tr><tr valign="top"><td style="line-height: 17px;font-size: 8px;color: #FF0000;width: 14px;filter: DropShadow(Color=#000000, OffX=1, OffY=1);">□</td><td><a href="http://news.cau.edu.cn/show.php?id=0000045257" target="_blank" title="中德IRTG项目代表团来访　柯炳生会见（图文）"><b>中德IRTG项目代表团来访　柯炳生会见（图文） </b></a> [03-26]</td></tr><tr valign="top"><td style="line-height: 17px;font-size: 8px;color: #FF0000;width: 14px;filter: DropShadow(Color=#000000, OffX=1, OffY=1);">□</td><td><a href="http://news.cau.edu.cn/show.php?id=0000045256" target="_blank" title="涿州市副市长前往我校涿州教学实验场调研（图文）"><b>涿州市副市长前往我校涿州教学实验场调研（图文） </b></a> [03-26]</td></tr><tr valign="top"><td style="line-height: 17px;font-size: 8px;color: #FF0000;width: 14px;filter: DropShadow(Color=#000000, OffX=1, OffY=1);">□</td><td><a href="http://news.cau.edu.cn/show.php?id=0000045251" target="_blank" title="校医院关爱学生显医德 患者家长送锦旗表感谢（图文）"><b>校医院关爱学生显医德 患者家长送锦旗表感谢（图文） </b></a> [03-26]</td></tr><tr valign="top"><td style="line-height: 17px;font-size: 8px;color: #FF0000;width: 14px;filter: DropShadow(Color=#000000, OffX=1, OffY=1);">□</td><td><a href="http://news.cau.edu.cn/show.php?id=0000045253" target="_blank" title="［第十次学代会］书记校长亲切对话学生代表（图文）"><b>［第十次学代会］书记校长亲切对话学生代表（图文） </b></a> [03-26]</td></tr><tr valign="top"><td style="line-height: 17px;font-size: 8px;color: #FF0000;width: 14px;filter: DropShadow(Color=#000000, OffX=1, OffY=1);">□</td><td><a href="http://news.cau.edu.cn/show.php?id=0000045218" target="_blank" title="我校刘西莉教授荣获北京市“三八”红旗奖章荣誉称号（图文）"><b>我校刘西莉教授荣获北京市“三八”红旗奖章荣誉称号（图文） </b></a> [03-26]</td></tr><tr valign="top"><td style="line-height: 17px;font-size: 8px;color: #FF0000;width: 14px;filter: DropShadow(Color=#000000, OffX=1, OffY=1);">□</td><td><a href="http://news.cau.edu.cn/show.php?id=0000045250" target="_blank" title="［第十次学代会］第十次学生代表大会举行 赵谈当选第十届学生会主席（图文）"><b>［第十次学代会］第十次学生代表大会举行 赵谈当选第十届学生会主席（图文） </b></a> [03-25]</td></tr><tr valign="top"><td style="line-height: 17px;font-size: 8px;color: #FF0000;width: 14px;filter: DropShadow(Color=#000000, OffX=1, OffY=1);">□</td><td><a href="http://news.cau.edu.cn/show.php?id=0000045249" target="_blank" title="［第十次学代会］学生代表讲心声提建议（图文）"><b>［第十次学代会］学生代表讲心声提建议（图文） </b></a> [03-25]</td></tr><tr valign="top"><td style="line-height: 17px;font-size: 8px;color: #FF0000;width: 14px;filter: DropShadow(Color=#000000, OffX=1, OffY=1);">□</td><td><a href="http://news.cau.edu.cn/show.php?id=0000045248" target="_blank" title="我校被评为首都高校“信息与网络安全保卫工作先进单位”（图文）"><b>我校被评为首都高校“信息与网络安全保卫工作先进单位”（图文） </b></a> [03-25]</td></tr></tbody></table>                  </marquee> 
+				   
+              </td>
+              </tr>
+              <tr>
+                <td class="title2" valign="top" align="right" height="12"><a href="http://news.cau.edu.cn/" target="_blank">更多新闻&gt;&gt;&gt;</a></td>
+              </tr>
+            </tbody>
+          </table>
+            </td>
+          <td valign="top" width="36%" height="150">
+            <table style="BORDER-RIGHT: #a5d6a4 1px solid; BORDER-TOP: #a5d6a4 1px solid; BORDER-LEFT: #a5d6a4 1px solid; BORDER-BOTTOM: #a5d6a4 1px solid" height="100%" cellspacing="0" cellpadding="0" width="261" border="0">
+              <tbody>
+              <tr>
+                <td width="205" height="20">
+                  <table height="20" cellspacing="0" cellpadding="0" width="170" border="0">
+                    <tbody>
+                    <tr>
+                      <td class="title2" align="right" width="170" height="20"><img height="20" src="./index_files/cau_25.gif" width="170" border="0"></td></tr></tbody></table></td></tr>
+              <tr>
+                <td bgcolor="#a5d6a4" height="1"><img height="1" src="./index_files/spacer.gif" width="1"></td></tr>
+              <tr>
+                <td class="content" valign="top" height="261"><!-- <marquee direction=up height=150 onMouseOut=this.start() onMouseOver=this.stop() scrollamount=1 scrolldelay=50> -->
+                  <table width="100%" class="content2"><tbody><tr><td valign="top" title="［中国科学报］新一代缓控释肥料即将入市"><li type="square" style="font-size:12px;color:red"><a href="http://news.cau.edu.cn/discussion/show.php?id=3156" target="_blank" style="text-decoration: none">［中国科学报］新一代缓控释肥料即将入市...</a></li></td></tr><tr><td valign="top" title="［中国科学报］中国低碳农业成败由“氮”"><li type="square" style="font-size:12px;color:red"><a href="http://news.cau.edu.cn/discussion/show.php?id=3155" target="_blank" style="text-decoration: none">［中国科学报］中国低碳农业成败由“氮”...</a></li></td></tr><tr><td valign="top" title="［光明日报］高校辅导员群体:同学生一起成长 历练来信心"><li type="square" style="font-size:12px;color:red"><a href="http://news.cau.edu.cn/discussion/show.php?id=3154" target="_blank" style="text-decoration: none">［光明日报］高校辅导员群体:同学生一起成长 历练来信心...</a></li></td></tr><tr><td valign="top" title="［农民日报］创造良好社会环境培养新型职业农民"><li type="square" style="font-size:12px;color:red"><a href="http://news.cau.edu.cn/discussion/show.php?id=3153" target="_blank" style="text-decoration: none">［农民日报］创造良好社会环境培养新型职业农民...</a></li></td></tr><tr><td valign="top" title="［人民日报］留守隐伤：留在村里的女人们"><li type="square" style="font-size:12px;color:red"><a href="http://news.cau.edu.cn/discussion/show.php?id=3152" target="_blank" style="text-decoration: none">［人民日报］留守隐伤：留在村里的女人们...</a></li></td></tr><tr><td valign="top" title="习近平：扎实做好保持党的纯洁性各项工作"><li type="square" style="font-size:12px;color:red"><a href="http://news.cau.edu.cn/discussion/show.php?id=3151" target="_blank" style="text-decoration: none">习近平：扎实做好保持党的纯洁性各项工作...</a></li></td></tr><tr><td valign="top" title="新华社：政府工作报告——2012年3月5日在第十一届全国人民代表大会第五次会议上"><li type="square" style="font-size:12px;color:red"><a href="http://news.cau.edu.cn/discussion/show.php?id=3150" target="_blank" style="text-decoration: none">新华社：政府工作报告——2012年3月5日在第十一届全国人民代表大会...</a></li></td></tr><tr><td valign="top" title="温家宝总理答中外记者问"><li type="square" style="font-size:12px;color:red"><a href="http://news.cau.edu.cn/discussion/show.php?id=3149" target="_blank" style="text-decoration: none">温家宝总理答中外记者问...</a></li></td></tr></tbody></table>                  <!-- </marquee> --></td>
+              </tr>
+              <tr>
+                <td class="title2" valign="top" align="right" height="12">&nbsp;<a href="http://news.cau.edu.cn/discussion" target="_blank">更多评论&gt;&gt;&gt;</a></td></tr></tbody></table></td></tr></tbody></table>
+      <table cellspacing="2" cellpadding="0" width="100%" border="0">
+        <tbody>
+        <tr>
+          <td valign="top" align="middle" width="63%" height="104">
+       <table height="84" cellspacing="0" cellpadding="0" width="80%" align="center" border="0">
+              <tbody>
+              <tr>
+                <td width="113" height="25" align="left"><img height="20" src="./index_files/cau_33.gif" width="113">　</td>
+                <td width="187" align="left" class="content2"><div align="center"><a href="http://www.cau.edu.cn/xiaonei2010/in/#rcb" target="_blank"><font color="#0000FF">今明日程（<font color="#000000">今日活动</font> 1 <font color="#000000">项</font>）</font></a></div></td>
+              </tr>
+              <tr>
+                <td height="1" colspan="2" bgcolor="#0f930f"><img height="1" src="./index_files/spacer.gif" width="1"></td></tr>
+			   <tr>
+                <td colspan="2" class="content2" valign="top">
+              
+		    <div id="con"> 
+              <ul id="tags"> 
+                  <li><a href="http://www.cau.edu.cn/home/content/content1.php" onmouseover="selectTag(&#39;tagContent0&#39;,this)">学校公告</a></li> 
+                  <li class="selectTag"><a href="http://www.cau.edu.cn/xiaonei2010/in/" onmouseover="selectTag(&#39;tagContent1&#39;,this)">校内公告</a></li> 
+                </ul> 
+                <div id="tagContent"> 
+                <div id="tagContent0" class="tagContent">    
+			  
+				<table border="0" width="460" cellspacing="1" cellpadding="1" class="content2" align="left"><tbody><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">就业指导中心: 
+
+</font><a href="http://scc.cau.edu.cn/News/view.aspx?id=2551" target="_blank" title="&lt;B&gt;中国农业大学2012届毕业生校园双选会邀请函"><b>中国农业大学2012届毕业生校园双选会邀请函</b></a><b>(03-27)</b></td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">北京建设大学: 
+
+</font><a href="http://www.bjjsdx.com/news.php/nid/1266" target="_blank" title="ERP工程师职业能力认证招生简介">ERP工程师职业能力认证招生简介</a>(03-27)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">图书馆: 
+
+</font><a href="http://www.lib.cau.edu.cn/news/show_newss.html?id=1277" target="_blank" title="ASCE美国土木工程师学会全文电子期刊及会议录数据库开通通知">ASCE美国土木工程师学会全文电子期刊及会议录数据库开通通知</a>(03-26)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">资源与环境学院: 
+
+</font><a href="http://www.cau.edu.cn/zihuan/news2.php?ID=5756" target="_blank" title="“植物－土壤相互作用提高养分水分资源利用效率和作物生产力”国际学术会议 ">“植物－土壤相互作用提高养分水分资源利用效率和作物生产力”国际学术会议 </a>(03-26)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">图书馆: 
+
+</font><a href="http://www.lib.cau.edu.cn/news/show_newss.html?id=1270" target="_blank" title="中国高校人文社会科学文献中心（CASHL）八周年庆典特惠活动">中国高校人文社会科学文献中心（CASHL）八周年庆典特惠活动</a>(03-26)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">图书馆: 
+
+</font><a href="http://www.lib.cau.edu.cn/news/show_newss.html?id=1264" target="_blank" title="关于申请2012年度高校博士点基金课题查新的温馨提示">关于申请2012年度高校博士点基金课题查新的温馨提示</a>(03-26)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">教务处: 
+
+</font><a href="http://www.cau.edu.cn/zhaoban/zsc/?sort=3th&version=&tid=988" target="_blank" title="&lt;b&gt;中国农业大学2012年校园开放日暨高招咨询会公告&lt;/b&gt;"><b>中国农业大学2012年校园开放日暨高招咨询会公告</b></a>(03-26)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">研究生院: 
+
+</font><a href="http://www.cau.edu.cn/#" target="_blank" title="&lt;b&gt;紧急通知：因系统故障，研究生2012年上半年全国大学外语四六级考试报名时间延长至3月25日晚7点，请相互转告"><b>紧急通知：因系统故障，研究生2012年上半年全国大学外语四六级考试报名时间延长至3月25日晚7点，请相互转告</b></a><b>(03-25)</b></td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">建设工程招标办公室: 
+
+</font><a href="http://houqin.cau.edu.cn/houqin_clt/news/132/16245.html" target="_blank" title="国家玉米改良中心二期建设—南繁实验基地田间工程建设项目中标结果公示">国家玉米改良中心二期建设—南繁实验基地田间工程建设项目中标结果公示</a>(03-23)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">北京建设大学: 
+
+</font><a href="http://www.bjjsdx.com/news.php/nid/1263" target="_blank" title="建筑工程管理一年制技能型大专班">建筑工程管理一年制技能型大专班</a>(03-22)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">植物生理学与生物化学国家重点实: 
+
+</font><a href="http://sklppb.cau.edu.cn/html/2012/sk_2_0223/324.html" target="_blank" title="&lt;b&gt;中国农业大学 博士后 招聘启事"><b>中国农业大学 博士后 招聘启事</b></a><b>(03-21)</b></td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">植物生理学与生物化学国家重点实: 
+
+</font><a href="http://sklppb.cau.edu.cn/html/2012/sk_1_0314/328.html" target="_blank" title="&lt;b&gt;第十三届全国植物基因组大会(第一轮通知)"><b>第十三届全国植物基因组大会(第一轮通知)</b></a><b>(03-21)</b></td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">北京建设大学: 
+
+</font><a href="http://www.bjjsdx.com/news.php/nid/1253" target="_blank" title="国家普通话培训考试招生">国家普通话培训考试招生</a>(03-21)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">图书馆: 
+
+</font><a href="http://www.lib.cau.edu.cn/news/show_newss.html?id=1271" target="_blank" title=" 关于CALIS“中文学位论文获取优惠活动”的通知"> 关于CALIS“中文学位论文获取优惠活动”的通知</a>(03-20)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">建设工程招标办公室: 
+
+</font><a href="http://houqin.cau.edu.cn/houqin_clt/news/131/16213.html" target="_blank" title="圆明园西路3号院更换木质配电盘工程招标公告">圆明园西路3号院更换木质配电盘工程招标公告</a>(03-19)</td></tr> <tr>
+                <td class="title2" valign="top" align="right" height="12" colspan="2"><a href="http://www.cau.edu.cn/home/content/content1.php" target="_blank">更多公告&gt;&gt;&gt;</a></td></tr></tbody></table></div> 
+                <div id="tagContent1" class="tagContent selectTag">   
+				 
+				<table border="0" width="460" cellspacing="1" cellpadding="1" class="content2" align="left"><tbody><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">[名家论坛]: 
+
+</font><a href="http://news.cau.edu.cn/caunc/bencandy.php?fid=2&aid=1227" target="_blank" title="&lt;B&gt;知名电视主持人白燕升：尊重传统 敬畏经典——从戏里戏外解读艺术与人生&lt;/B&gt;"><b>知名电视主持人白燕升：尊重传统 敬畏经典——从戏里戏外解读艺术与人生</b></a>(03-26)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">党政办公室: 
+
+</font><a href="http://www.cau.edu.cn/bgs/dzb/detail.php?id=389" target="_blank" title="&lt;B&gt;关于清明节、“五一”国际劳动节、端午节放假等事项的通知"><b>关于清明节、“五一”国际劳动节、端午节放假等事项的通知</b></a><b>(03-23)</b></td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">科研院: 
+
+</font><a href="http://kyy.cau.edu.cn/ArticleRead.aspx?uid=1060&cid=114" target="_blank" title="报送2010-2011年SCI,EI,SSCI收录论文第一作者相关信息的通知 ">报送2010-2011年SCI,EI,SSCI收录论文第一作者相关信息的通知 </a>(03-20)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">科研院: 
+
+</font><a href="http://kyy.cau.edu.cn/ArticleRead.aspx?uid=1062&cid=114" target="_blank" title="发放2011年度科技成果奖励津贴的通知 ">发放2011年度科技成果奖励津贴的通知 </a>(03-20)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">科研院: 
+
+</font><a href="http://kyy.cau.edu.cn/ArticleRead.aspx?uid=1035&cid=114" target="_blank" title="2011年9-12月SCI、EI、SSCI、CSSCI收录我校论文奖励公告">2011年9-12月SCI、EI、SSCI、CSSCI收录我校论文奖励公告</a>(03-13)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">后勤基建处: 
+
+</font><a href="http://houqin.cau.edu.cn/houqin_clt/news/112/16253.html" target="_blank" title="&lt;b&gt;关于农大东区社区启动垃圾分类试点工作的通知"><b>关于农大东区社区启动垃圾分类试点工作的通知</b></a><b>(03-27)</b></td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">校学生会: 
+
+</font><a href="http://www.cau.edu.cn/caustu/index.php?action=index&do=view&id=1236" target="_blank" title="&lt;b&gt;【敬请关注】中国农业大学2012年度“梦坊杯”校园十佳歌手大赛"><b>【敬请关注】中国农业大学2012年度“梦坊杯”校园十佳歌手大赛</b></a><b>(03-27)</b></td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">教务处: 
+
+</font><a href="http://jwc.cau.edu.cn/administration_office/show.html?id=3510" target="_blank" title="关于清明节、“五一”国际劳动节放假教学安排的补充通知">关于清明节、“五一”国际劳动节放假教学安排的补充通知</a>(03-27)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">教务处: 
+
+</font><a href="http://jwc.cau.edu.cn/administration_office/show.html?id=3494" target="_blank" title="关于开展2012年校级本科教材立项申报工作的通知">关于开展2012年校级本科教材立项申报工作的通知</a>(03-27)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">研究生院: 
+
+</font><a href="http://www.cau.edu.cn/gradsch/gonggao/12/yjsjyggzqyj.htm" target="_blank" title="&lt;b&gt;关于《中国农业大学研究生教育改革方案（讨论稿）》征求意见的通知&lt;b&gt;"><b>关于《中国农业大学研究生教育改革方案（讨论稿）》征求意见的通知<b></b></b></a><b><b>(03-27)</b></b></td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">校团委: 
+
+</font><a href="http://youth.cau.edu.cn/index.php?go=artshow&id=1891" target="_blank" title="关于发放首都大学生暑期社会实践证书及“千乡万村环保科普”证书的通知">关于发放首都大学生暑期社会实践证书及“千乡万村环保科普”证书的通知</a>(03-27)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">人事处: 
+
+</font><a href="http://rsc1.cau.edu.cn/art/2012/3/26/art_856_110562.html" target="_blank" title="&lt;b&gt;关于2012年拟入校工作的应届毕业生领取接收函及来校报到工作安排的通知"><b>关于2012年拟入校工作的应届毕业生领取接收函及来校报到工作安排的通知</b></a><b>(03-27)</b></td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">人文与发展学院: 
+
+</font><a href="http://cohd.cau.edu.cn/cohdwyx/a/tongzhigonggao/tongzhilanmu/2012/0323/658.html" target="_blank" title="中国农业大学语言教学实验中心开放通知（试运行）">中国农业大学语言教学实验中心开放通知（试运行）</a>(03-27)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">研究生院: 
+
+</font><a href="http://www.cau.edu.cn/gradsch/gonggao/12/20120327.htm" target="_blank" title="关于清明节、“五一”国际劳动节、端午节放假期间有关研究生教学安排的通知">关于清明节、“五一”国际劳动节、端午节放假期间有关研究生教学安排的通知</a>(03-27)</td></tr><tr> <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">就业指导中心: 
+
+</font><a href="http://scc.cau.edu.cn/News/view.aspx?id=2584" target="_blank" title="&lt;b&gt;关于我校博士生参加南京国际交流与合作大会的通知"><b>关于我校博士生参加南京国际交流与合作大会的通知</b></a><b>(03-27)</b></td></tr> <tr>
+                <td class="title2" valign="top" align="right" height="12" colspan="2"><a href="http://www.cau.edu.cn/xiaonei2010/in/" target="_blank">更多公告&gt;&gt;&gt;</a></td></tr></tbody></table></div>
+				 </div> 
+            </div>
+             </td>
+              </tr>
+</tbody></table></td>
+          <td style="BACKGROUND-POSITION: right bottom; BACKGROUND-REPEAT: no-repeat" valign="top" width="37%">
+            <table width="98%" height="380" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tbody>
+              <tr>
+                <td width="137" height="25"><img height="20" src="./index_files/cau_35.gif" width="113"> </td>
+                <td width="138" class="content2"><a href="http://www.cau.edu.cn/xiaonei/in/ggadmin/dingyue/" target="_blank"><font color="#0000FF">订阅</font></a></td>
+              </tr>
+              <tr>
+                <td height="1" colspan="2" bgcolor="#0f930f"><img height="1" src="./index_files/spacer.gif" width="1"></td></tr>
+              <tr>
+                <td height="338" colspan="2" valign="top">                  <table border="0" cellspacing="1" cellpadding="1" class="content2"><tbody><tr>  <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">资源与环境学院: 
+
+</font><a href="http://www.cau.edu.cn/zihuan/news2.php?ID=5762" target="_blank" title="地上地下互馈机制--引智计划总结 ">地上地下互馈机制--引智计划总结 </a>(03-27)</td></tr><tr>  <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">生物学院: 
+
+</font><a href="http://cbs.cau.edu.cn/LearnedReportContent.aspx?reportId=376" target="_blank" title="3月29日高级遗传学seminar 刘峰 研究员（中国科学院动物研究所）">3月29日高级遗传学seminar 刘峰 研究员（中国科学院动物研究所）</a>(03-27)</td></tr><tr>  <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">生物学院: 
+
+</font><a href="http://cbs.cau.edu.cn/LearnedReportContent.aspx?reportId=375" target="_blank" title="3月27日高级遗传学seminar 任东涛 教授">3月27日高级遗传学seminar 任东涛 教授</a>(03-27)</td></tr><tr>  <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">资源与环境学院: 
+
+</font><a href="http://www.cau.edu.cn/zihuan/news2.php?ID=5759" target="_blank" title="资源环境与粮食安全研究中心学术报告">资源环境与粮食安全研究中心学术报告</a>(03-26)</td></tr><tr>  <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">理学院: 
+
+</font><a href="http://www.cau.edu.cn/sci/index.php?do=xsbgshow&id=32" target="_blank" title="农药学Seminar 系列讲座之二">农药学Seminar 系列讲座之二</a>(03-26)</td></tr><tr>  <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">信电学院: 
+
+</font><a href="http://www.ciee.cn/ciee/index.php?do=bgshow&id=96" target="_blank" title="英国卡迪夫大学工程学院招生介绍报告会">英国卡迪夫大学工程学院招生介绍报告会</a>(03-26)</td></tr><tr>  <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">资源与环境学院: 
+
+</font><a href="http://www.cau.edu.cn/zihuan/news2.php?ID=5755" target="_blank" title="中国农业大学---美国加州大学河滨分校国际生态与可持续发展研究中心学术报告 ">中国农业大学---美国加州大学河滨分校国际生态与可持续发展研究中心学术报告 </a>(03-26)</td></tr><tr>  <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">人文与发展学院: 
+
+</font><a href="http://cohd.cau.edu.cn/main/html/xueshuhuodong/2012/0325/4190.html" target="_blank" title="【农政与发展】系列讲座（8）：秦晖—中国革命中的土地改革问题">【农政与发展】系列讲座（8）：秦晖—中国革命中的土地改革问题</a>(03-25)</td></tr><tr>  <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">人文与发展学院: 
+
+</font><a href="http://cohd.cau.edu.cn/main/html/xueshuhuodong/2012/0221/4113.html" target="_blank" title="【农政与发展】2012年春季学期安排">【农政与发展】2012年春季学期安排</a>(03-25)</td></tr><tr>  <td valign="top" width="11">·</td><td valign="top" align="left" width="430"><font color="#FF6600">植物生理学与生物化学国家重点实: 
+
+</font><a href="http://sklppb.cau.edu.cn/html/2012/sk_6_0323/332.html" target="_blank" title="&lt;b&gt;2012年3月29日（星期四） 下午3:30 报告人：瞿礼嘉 教授"><b>2012年3月29日（星期四） 下午3:30 报告人：瞿礼嘉 教授</b></a><b>(03-23)</b></td></tr></tbody></table></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="right" valign="bottom" class="title2"><a href="http://www.cau.edu.cn/home/content/content2.php" target="_blank">更多报告&gt;&gt;&gt;</a></td>
+              </tr></tbody></table></td></tr></tbody></table>              
+</td></tr></tbody></table>
+		<table width="930" height="5" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+          <tbody><tr>
+            <td>
+			</td>
+          </tr>
+        </tbody></table>
+		<table cellspacing="0" cellpadding="0" width="930" align="center" border="0">
+  <tbody>
+  <tr>
+    <td style="BACKGROUND-POSITION: right bottom; BACKGROUND-REPEAT: no-repeat" valign="top" width="930" background="./index_files/cau_bg3.jpg" bgcolor="#ffffff">
+      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="929" height="87">
+        <param name="movie" value="/home/index.files/bj.swf">
+        <param name="quality" value="high">
+        <embed src="/home/index.files/bj.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="929" height="87">
+      </object>    
+      <table height="0" cellspacing="5" cellpadding="0" width="930" border="0">
+        <tbody>
+          <tr>
+            <td width="20%" align="center" valign="top"><table cellspacing="0" cellpadding="0" width="176" align="right" border="0">
+                <tbody>
+                  <tr>
+                    <td><img height="25" src="./index_files/cau_jigoutop.gif" width="176"></td>
+                  </tr>
+                  <tr>
+                    <td class="content3" valign="top" background="./index_files/cau_jigoubg.gif" height="365" align="left"><span class="style6">党政部门</span><br>
+                     &nbsp;&nbsp;<a href="http://www.cau.edu.cn/bgs/dzb/" target="_blank">党政办公室</a>
+&nbsp;&nbsp;<a href="http://www.cau.edu.cn/party/test/" target="_blank">组织部</a><br> &nbsp;&nbsp;<a href="http://news.cau.edu.cn/caunc/" target="_blank">宣传部</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://tzb.cau.edu.cn/" target="_blank">统战部</a><br>
+&nbsp;&nbsp;<a href="http://xsc.cau.edu.cn/" target="_blank">学生工作部</a>(含<a href="http://scc.cau.edu.cn/" target="_blank">就业指导中心</a>)<br>
+&nbsp;&nbsp;<a href="http://jiwei1.cau.edu.cn/" target="_blank">纪委（监察处）</a><br>
+&nbsp;&nbsp;<a href="http://fzghc.cau.edu.cn/" target="_blank">发展规划处</a> &nbsp;&nbsp;<a href="http://www.cau.edu.cn/gradsch/" target="_blank">研究生院</a><br>
+&nbsp;&nbsp;<a href="http://jwc.cau.edu.cn/" target="_blank">教务处</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://kyy.cau.edu.cn/" target="_blank">科研院</a><br>
+&nbsp;&nbsp;<a href="http://rsc1.cau.edu.cn/" target="_blank">人事处</a><br>
+&nbsp;&nbsp;<a href="http://211.82.80.3:8088/">财务处</a>(含<a href="http://ecard.cau.edu.cn/">校园卡管理中心</a>)<br>
+&nbsp;&nbsp;<a href="http://oir.cau.edu.cn/">国际合作与交流处(港澳台办)</a><br>
+&nbsp;&nbsp;<a href="http://sjc1.cau.edu.cn/" target="_blank">审计处</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://gzc.cau.edu.cn/" target="_blank">国有资产管理处</a><br>&nbsp;&nbsp;<a href="http://houqin1.cau.edu.cn/" target="_blank">后勤基建处</a>
+<br>&nbsp;&nbsp;<a href="http://bwc1.cau.edu.cn/" target="_blank">保卫处</a><br>
+&nbsp;&nbsp;<a href="http://cyc.cau.edu.cn/" target="_blank">校办产业办公室</a><br>&nbsp;&nbsp;<a href="http://ltc.cau.edu.cn/" target="_blank">离退休工作处</a><br>
+<span class="style6">群众团体</span>&nbsp;<br>
+&nbsp;&nbsp;<a href="http://gonghui.cau.edu.cn/">校工会</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://youth.cau.edu.cn/" target="_blank"> 校团委</a><br>
+<span class="style6">辅助机构</span><br>
+&nbsp;&nbsp;<a href="http://news.cau.edu.cn/" target="_blank">新闻中心</a>
+&nbsp;&nbsp;<a href="http://www.lib.cau.edu.cn/" target="_blank">图书馆</a><br>
+&nbsp;&nbsp;<a href="http://netcenter.cau.edu.cn/" target="_blank">网络中心</a> 
+&nbsp;&nbsp;<a href="http://caucc.cau.edu.cn/" target="_blank">计算中心</a><br>
+&nbsp;&nbsp;<a href="http://www.cau.edu.cn/caup/" target="_blank">出版社</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://dag1.cau.edu.cn/" target="_blank">档案馆</a><br>
+&nbsp;&nbsp;<a href="http://ehospital.cau.edu.cn/" target="_blank">校医院</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://xyh.cau.edu.cn/" target="_blank">校友总会</a><br>
+&nbsp;&nbsp;<a href="http://wuchuan.cau.edu.cn/" target="_blank">武川实验站</a><br>
+&nbsp;&nbsp;<a href="http://cab.cau.edu.cn/shzh" target="_blank">上庄实验站</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.cau.edu.cn/qzsyz" target="_blank">曲周实验站</a><br>&nbsp;&nbsp;<a href="http://tyg1.cau.edu.cn/" target="_blank">体育馆管理中心</a><br>&nbsp;&nbsp;<a href="http://cauef.cau.edu.cn/" target="_blank">中国农业大学教育基金会</a></td>
+                  </tr>
+                  <tr>
+                    <td valign="top" background="./index_files/cau_jigoubg.gif" height="4"><img height="4" src="./index_files/cau_jigoubottom.gif" width="176"></td>
+                  </tr>
+                </tbody>
+            </table></td>
+            <td style="BORDER-RIGHT: #cccccc 1px dotted" valign="top" width="20%" height="297"><table width="100%" height="90" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td height="16"><img height="16" src="./index_files/cau_39.gif" width="68"></td>
+                  </tr>
+                  <tr>
+                    <td height="2"><img height="2" src="./index_files/cau_45.jpg" width="150"></td>
+                  </tr>
+                  <tr>
+                    <td class="content2" valign="top" height="72"><p><a href="http://www.cau.edu.cn/home/dingceng/gaikuang.htm" target="_blank">基本概况</a><a href="http://ciee.cau.edu.cn/xnxy/index.html" target="_blank">&nbsp;虚拟校园</a><br>
+                            <a href="http://www.cau.edu.cn/home/jieshao/lindao.htm" target="_blank">校领导</a><a href="http://www.cau.edu.cn/home/jieshao/dangan.htm" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;校史档案</a><a href="http://jwc.cau.edu.cn/administration_office/show.html?id=3153" target="_blank"> <br>
+                      校历</a>　<a href="http://www.cau.edu.cn/home/jieshao/vis.htm" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;视觉识别</a></p></td>
+                  </tr>
+                </tbody>
+              </table>
+                <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                  <tbody>
+                    <tr>
+                      <td><img height="16" src="./index_files/cau_54.gif" width="69"></td>
+                    </tr>
+                    <tr>
+                      <td height="2"><img height="2" src="./index_files/cau_45.jpg" width="150"></td>
+                    </tr>
+                    <tr>
+                      <td class="content2" valign="top"><p><font color="#333333">本科教育</font><br>
+                              <a href="http://www.cau.edu.cn/zhaoban/" target="_blank"><font face="楷体_GB2312">　招生入学　</font></a><font face="楷体_GB2312"><a href="http://jwc.cau.edu.cn/" target="_blank">教学管理<br>
+                              </a>　<a href="http://xuanke.cau.edu.cn:8080/jxpg/" target="_blank">教学评价</a><a href="http://xsc.cau.edu.cn/?b=listnews&id=21" target="_blank">　规章制度</a><br>
+                              <a href="http://www.cau.edu.cn/jwc/putong/index22.php3" target="_blank">　</a><a href="http://zizhu.cau.edu.cn/index.php" target="_blank">奖掖英才</a>　<a href="http://zizhu.cau.edu.cn/index.php" target="_blank">济困助学</a><br>
+                              　<a href="http://xinli.cau.edu.cn/" target="_blank">心理咨询</a> <a href="http://scc.cau.edu.cn/" target="_blank">&nbsp;毕业生就业</a></font><br>
+                              <font color="#0000ff"><a href="http://www.cau.edu.cn/gradsch/" target="_blank">研究生教育</a>　<a href="http://www.cau.edu.cn/pga" target="_blank">研究生会</a><br>
+                              <a href="http://www.cau.edu.cn/mba" target="_blank">工商管理硕士(MBA)</a><br>
+<font color="#000000"><a href="http://icb.east.net/" target="_blank">中外合作办学--国际学院</a></font><br>
+                              <a href="http://www.cau.edu.cn/cohd/i-education/" target="_blank">中外合作办学--人发国际班 </a><br>
+                              <a href="http://jjxy.cau.edu.cn/" target="_blank">成人继续教育</a></font><br>
+                              <a href="http://www.cau-edu.net.cn/" target="_blank">网络远程教育</a><br>
+                              <br>
+                          <a href="http://houqin1.cau.edu.cn/" target="_blank">后勤服务</a>　　<a href="http://rsc1.cau.edu.cn/col/col2421/index.html" target="_blank">师资力量</a><br>
+                              <a href="http://202.205.91.11/" target="_blank">校园文化　　</a><a href="http://xyh.cau.edu.cn/" target="_blank">校友总会</a><br>
+                          <a href="http://ehospital.cau.edu.cn/" target="_blank">医疗保障　　</a><a href="http://zhaopin.cau.edu.cn/" target="_blank">师资招聘</a>　</p></td>
+                    </tr>
+                  </tbody>
+              </table></td>
+            <td style="BORDER-RIGHT: #cccccc 1px dotted" valign="top" width="20%"><table width="100%" height="123" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td height="16"><img height="16" src="./index_files/cau_41.gif" width="68"></td>
+                  </tr>
+                  <tr>
+                    <td height="2"><img height="2" src="./index_files/cau_45.jpg" width="150"></td>
+                  </tr>
+                  <tr>
+                    <td class="content2" valign="top" height="105"><p>
+					<a href="http://kyy.cau.edu.cn/index.aspx?channelID=16" target="_blank">重点实验室</a>
+					<a href="http://kyy.cau.edu.cn/index.aspx?channelID=16" target="_blank">重点研究中心</a><br>
+                            <a href="http://kyy.cau.edu.cn/index.aspx?channelID=17" target="_blank">科研项目　</a> <a href="http://kyy.cau.edu.cn/index.aspx?channelID=18" target="_blank">科研成果</a><br>
+                            <a href="http://fzghc.cau.edu.cn/fzghc_clt/index-211.html" target="_blank">211工程</a><a href="http://fzghc.cau.edu.cn/fzghc_clt/index-985.html" target="_blank">　 985工程</a><br>
+                            <a href="http://www.cau.edu.cn/home/kexue/5.htm" target="_blank">学术刊物</a>&nbsp;&nbsp;&nbsp;
+					<a href="http://rsc1.cau.edu.cn/col/col2421/index.html" target="_blank">&nbsp;研究队伍</a><a href="http://rsc.cau.edu.cn/" target="_blank">　</a><br>
+                      <a href="http://kyy.cau.edu.cn/index.aspx?channelID=155&pID=17" target="_blank">科研政策</a>&nbsp;&nbsp;&nbsp; <a href="http://zhaopin.cau.edu.cn/" target="_blank">&nbsp;招聘英才</a></p></td>
+                  </tr>
+                </tbody>
+              </table>
+                <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                  <tbody>
+                    <tr>
+                      <td><img height="16" src="./index_files/cau_56.gif" width="68"></td>
+                    </tr>
+                    <tr>
+                      <td height="2"><img height="2" src="./index_files/cau_45.jpg" width="150"></td>
+                    </tr>
+                    <tr>
+                      <td class="content2" valign="top" height="70"><a href="http://cyc.cau.edu.cn/col/col2093/index.html" target="_blank">企业名录</a><br>
+                          <a href="http://cyc.cau.edu.cn/col/col2105/index.html" target="_blank">科技园（孵化器）</a><br>
+                      <a href="http://www.cau.edu.cn/zndjm/" target="_blank">国际会议中心</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                  <tbody>
+                    <tr>
+                      <td><img height="16" src="./index_files/cau_43.gif" width="68"></td>
+                    </tr>
+                    <tr>
+                      <td height="2"><img height="2" src="./index_files/cau_45.jpg" width="150"></td>
+                    </tr>
+                    <tr>
+                      <td class="content2" valign="top" height="16"><a href="http://www.cau.edu.cn/cyc/" target="_blank">国内合作　</a> <a href="http://oir.cau.edu.cn/" target="_blank">国际合作</a><br>
+                          <a href="http://www.cau.edu.cn/ciicta/" target="_blank">中国—以色列培训中心</a><br><br>
+           
+                
+               <a href="http://houqin.cau.edu.cn/houqin_clt/news/user/title13.do" target="_blank">建设工程招标办公室</a>                    </td></tr>
+                  </tbody>
+              </table></td>
+            <td valign="top" width="20%"><table cellspacing="0" cellpadding="0" width="101%" border="0">
+                <tbody>
+                  <tr>
+                    <td><img height="16" src="./index_files/cau_59.gif" width="68"></td>
+                  </tr>
+                  <tr>
+                    <td height="2"><img height="2" src="./index_files/cau_45.jpg" width="150"></td>
+                  </tr>
+                  <tr>
+                    <td class="content2" valign="top" height="97"><p>
+                   <a href="http://v.cau.edu.cn/" target="_blank">校内在线</a>
+                  <a href="http://vod.cau.edu.cn/" target="_blank">影视剧场</a><br> <a href="http://netcenter.cau.edu.cn/caunet_clt_new/news/10/14.html" target="_blank">网络电视</a>
+                        <a href="http://music.cau.edu.cn/" target="_blank">音乐在线</a><br><a href="http://ftp.cau.edu.cn/" target="_blank">FTP</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href="http://cohdwyx.cau.edu.cn/study_center/" target="_bland">外语学习中心</a><br>
+                        <a href="http://vpn.cau.edu.cn/" target="_blank">校外vpn</a>&nbsp;
+                  <a href="http://www.cau.edu.cn/home/dingceng/shenghuo.htm" target="_bland"> 生活服务</a></p><p></p></td>
+                  </tr>
+                </tbody>
+              </table>
+                <table width="99%" height="195" border="0" cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td><font color="#339900"><img height="16" src="./index_files/cau_52.gif" width="68"></font></td>
+                    </tr>
+                    <tr>
+                      <td height="2"><img height="2" src="./index_files/cau_45.jpg" width="150"></td>
+                    </tr>
+                    <tr>
+                      <td class="content2" valign="top" height="165">
+<a href="http://wusetu.cn/logok.htm" target="_blank">五色土BBS</a><br>
+                  <a href="http://www.bj.cuepa.cn/" target="_blank">北京高校校报新闻网</a><br>                       <a href="http://museum.cau.edu.cn/" target="_blank">农业数字博物馆</a><br>
+                          <a href="http://www.enong.com/" target="_blank">亿农网（网关）</a><br>
+                 <a href="http://www.cau.edu.cn/nyh/" target="_blank">中国农业大学农村发展研究会</a>
+                   <br>
+
+                          <a href="http://www.cau.edu.cn/crdp/" target="_blank">中国农村政策研究中心</a>
+                   <br>
+                     <a href="http://www.cau.edu.cn/caustu" target="_blank">中国农业大学学生会</a>
+                   <br>
+                   <a href="http://www.cau.edu.cn/zhiyou" target="_blank">挚友之约</a>
+                   <br>
+                      <a href="http://shetuan.cau.edu.cn/" target="_blank">社团团工委
+                      </a>                  </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table cellspacing="0" cellpadding="0" width="103%" border="0">
+                  <tbody>
+                    <tr>
+                      <td><img height="16" src="./index_files/cau_51.gif" width="68"></td>
+                    </tr>
+                    <tr>
+                      <td height="2"><img height="2" src="./index_files/cau_45.jpg" width="150"></td>
+                    </tr>
+                    <tr>
+                      <td class="content2" valign="top" height="16"><a href="http://www.gov.cn/" target="_blank">中央政府网</a>  　<a href="http://www.beijing.gov.cn/" target="_blank">首都之窗</a><br>
+                       <a href="http://www.moe.gov.cn/" target="_blank">教育部</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.agri.gov.cn/" target="_blank"> 农业部</a><br>
+                          <a href="http://www.most.gov.cn/" target="_blank">科技部</a> 　<a href="http://www.gov.cn/"></a>&nbsp;&nbsp;&nbsp;<a href="http://www.cau.edu.cn/home/lianjie/meiti.htm" target="_blank">主要媒体</a><br>
+                          <a href="http://www.edu.cn/HomePage/jiao_yu_zi_yuan/college.php" target="_blank">中国高校</a>　&nbsp;<a href="http://www.cau.edu.cn/home/lianjie/zhumin.htm" target="_blank">世界著名大学</a><br>
+                          <a href="http://www.cau.edu.cn/home/lianjie/guoji.htm" target="_blank">国际组织</a></td>
+                    </tr>
+                  </tbody>
+              </table></td>
+            <td valign="top" width="20%"><table cellspacing="0" cellpadding="0" width="176" align="right" border="0">
+                <tbody>
+                  <tr>
+                    <td><img height="25" src="./index_files/cau_xueyuantop.jpg" width="176"></td>
+                  </tr>
+                  <tr>
+                    <td class="content3" valign="top" background="./index_files/cau_xueyuanbg.gif" height="365"><p><a href="http://cab.cau.edu.cn/" target="_blank">→&nbsp;农学与生物技术学院</a><br>
+                            <a href="http://cbs.cau.edu.cn/" target="_blank">→&nbsp;生物学院</a><br>
+                            <a href="http://cast1.cau.edu.cn/" target="_blank">→&nbsp;动物科技学院</a><br>
+                            <a href="http://www.cau.edu.cn/#">→&nbsp;</a><a href="http://cvm.cau.edu.cn/" target="_blank">动物医学院</a><br>
+                            <a href="http://www.cau.edu.cn/#">→&nbsp;</a><a href="http://spxy.cau.edu.cn/" target="_blank">食品科学与营养工程学院</a><br>
+                            <a href="http://www.cau.edu.cn/#">→&nbsp;</a><a href="http://www.cau.edu.cn/zihuan" target="_blank">资源与环境学院</a><br>
+                            <a href="http://www.ciee.cn/" target="_blank">→&nbsp;信息与电气工程学院</a><br>
+                            <a href="http://www.cau.edu.cn/#">→&nbsp;</a><a href="http://coe.cau.edu.cn/" target="_blank">工学院</a><br>
+                            <a href="http://www.cau.edu.cn/#">→&nbsp;</a><a href="http://www.cau.edu.cn/water/" target="_blank">水利与土木工程学院</a><br>
+                            <a href="http://www.cau.edu.cn/#">→&nbsp;</a><a href="http://www.cau.edu.cn/sci" target="_blank">理学院</a><br>
+                            <a href="http://www.cau.edu.cn/cem" target="_blank">→&nbsp;经济管理学院</a><br>
+                            <a href="http://www.cau.edu.cn/#">→&nbsp;</a><a href="http://cohd.cau.edu.cn/" target="_blank">人文与发展学院<br>
+                            </a>&nbsp;&nbsp;&nbsp;&nbsp;（<a href="http://cohd.cau.edu.cn/mpa/" target="_blank">公共管理学院</a>）<br>
+                            <a href="http://www.cau.edu.cn/#">→&nbsp;</a><a href="http://icb.cau.edu.cn/" target="_blank">国际学院</a><br>
+                            <a href="http://www.cau.edu.cn/#">→&nbsp;</a><a href="http://jjxy.cau.edu.cn/" target="_blank">继续教育学院<br>
+                  　　                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         </a>（<a href="http://www.cau-edu.net.cn/" target="_blank">远程教育</a>）<br>
+                   <a href="http://www.cau.edu.cn/#">→&nbsp;</a><a href="http://szxy1.cau.edu.cn/" target="_blank">思想政治教育学院</a><br>
+                  <a href="http://www.cau.edu.cn/#">→&nbsp;</a><a href="http://tyb1.cau.edu.cn/" target="_blank">体育与艺术教学部</a><br>
+                  <a href="http://www.cau.edu.cn/#">→&nbsp;</a><a href="http://www.cauyt.edu.cn/" target="_blank">烟台研究院</a><br>
+                  <a href="http://www.cau.edu.cn/#">→&nbsp;</a><a href="http://www.bjjsdx.com/">北京建设大学</a></p></td>
+                  </tr>
+                  <tr>
+                    <td valign="top" background="./index_files/cau_xueyuanbg.gif" height="4"><img height="4" src="./index_files/cau_xueyuanbottom.gif" width="176"></td>
+                  </tr>
+                </tbody>
+            </table></td>
+          </tr>
+        </tbody>
+      </table></td>
+</tr></tbody></table>
+<table class="title1" cellspacing="0" cellpadding="0" width="930" align="center" border="0">
+  <tbody>
+  <tr>
+    <td style="LINE-HEIGHT: 25px" align="middle" bgcolor="#339900" height="36">【访问量统计<font color="#ffffff">】</font><!--总浏览次数：<b><font face="华文细黑">104773270</font></b></font> --> 
+      <font color="#ffffff">今日浏览次数：<b><font face="华文细黑">96072</font></b></font> <font color="#ffffff">日平均浏览次数：<b><font face="华文细黑">84650</font></b></font><br>
+      设计维护：网络中心  
+      页面更新日期：2007年04月<br>
+      文保网安备案号:1101080025<br>
+      <script language="JavaScript" src="./index_files/di1.js" type="text/JavaScript"></script></td></tr></tbody></table><div id="haloword-lookup" class="ui-widget-content ui-draggable"><div id="haloword-title"><span id="haloword-word"></span><a herf="#" id="haloword-pron" class="haloword-button" title="发音"></a><audio id="haloword-audio"></audio><div id="haloword-control-container"><a href="http://www.cau.edu.cn/#" id="haloword-open" class="haloword-button" title="查看单词详细释义" target="_blank"></a><a herf="#" id="haloword-close" class="haloword-button" title="关闭查询窗"></a></div><br style="clear: both;"></div><div id="haloword-content"></div></div><div id="tc_container" style="display: none" data="fc"></div><sfmsg id="sfMsgId" data="{&quot;imageCount&quot;:0,&quot;ip&quot;:&quot;114.247.93.12&quot;}"></sfmsg></body></html>

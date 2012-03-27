@@ -1,0 +1,72 @@
+digraph G {
+    fontname="Microsoft YaHei";
+    label="爬虫全局逻辑图";
+    node[shape=box, color=blue];
+    /* Reptile */
+    continueRun[label="continueRun"]
+    subgraph cluster0 {
+        lable="ReptileLib"
+        node[shape=oval, style=filled, color=bisque];
+        Reptile_urlInQueue[label="urlInQueue"];
+        Reptile_urlist[label="urlist"];
+        Reptile_urlQueue[label="urlQueue"];
+        Reptile_continueRun[label="continueRun"]
+    };
+
+    /*
+        对CentreServ发送过来的一些指令
+        通过对全局数据进行更改
+        实现对爬虫线程库的控制
+    */
+    subgraph cluster1 {
+        label="ClientCtrlIn thread"
+        node[shape=oval, style=filled, color=bisque];
+        ClientCtrlIn_continueRun[label="continueRun"]
+        node[shape=box, color=aliceblue];
+        ClientCtrlIn_halt[label="halt"]
+        ClientCtrlIn_resume[label="resume"]
+        ClientCtrlIn_stop[label="stop"]
+    }
+
+    /*
+        主要负责对CentreServ发送一些消息
+        作为类
+        由ReptileLib控制
+    */
+    subgraph cluster2 {
+        label="ClientCtrlOut class"
+        node[shape=oval, style=filled, color=bisque];
+        ClientCtrlOut_continueRun[label="continueRun"]
+        node[shape=box, color=aliceblue];
+        ClientCtrlOut_requestNewPaths[label="requestNewPaths"]
+        ClientCtrlOut_sendNewInPaths[label="sendNewInPaths"]
+    }
+    /*contiueRun的全局绑定*/
+    continueRun -> Reptile_continueRun[style=dotted]
+    continueRun -> ClientCtrlIn_continueRun[style=dotted]
+    continueRun -> ClientCtrlOut_continueRun[style=dotted]
+
+    /*子平台服务器 负责接受CentreServ指令*/
+    subgraph cluster3 {
+        label="ClientServ"
+        node[shape=box, color=aliceblue];
+    }
+
+    /*中央控制服务器 接受子平台的请求*/
+    subgraph cluster3 {
+        label="CentreServ"
+        node[shape=oval, style=filled, color=bisque];
+        CentreServ_urlinqueue[label="urlInQueue"]
+        CentreServ_urlist[label="urlist"]
+    }
+
+    subgraph cluster4 {
+        label="UserFrame"
+        node[shape=box, color=aliceblue];
+        UserFrame_halt[label="halt"]
+        UserFrame_stop[label="stop"]
+        UserFrame_resume[label="resume"]
+    }
+
+
+};

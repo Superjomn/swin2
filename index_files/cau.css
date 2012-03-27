@@ -1,0 +1,66 @@
+.title {
+	FONT-SIZE: 13px; COLOR: #009900; FONT-FAMILY: "Verdana", "黑体"; LETTER-SPACING: 4px
+}
+.title1 {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: "Verdana", "宋体"
+}
+.textfield {
+	FONT-SIZE: 12px; WIDTH: 60px; COLOR: #336600; FONT-FAMILY: "Verdana", "宋体"; HEIGHT: 16px
+}
+.button {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; BORDER-LEFT: medium none; WIDTH: 40px; COLOR: #ffffff; PADDING-TOP: 4px; BORDER-BOTTOM: medium none; FONT-FAMILY: "Verdana", "宋体"; HEIGHT: 18px; BACKGROUND-COLOR: #006600
+}
+.content {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 18px; PADDING-TOP: 5px;PADDING-BOTTOM: 5px; FONT-FAMILY: "Verdana", "宋体"
+}
+.title2 {
+	FONT-SIZE: 14px; FILTER: DropShadow(Color=#f8fcf8, OffX=1, OffY=1, Positive=1); COLOR: #6bcd82; background-color: #FFFFFF; FONT-FAMILY: "楷体_GB2312"
+}
+.content A:link {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.content A:visited {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.content A:hover {
+	COLOR: #336600; TEXT-DECORATION: none
+}
+.title2 A:link {
+	COLOR: #336600; TEXT-DECORATION: none
+}
+.title2 A:visited {
+	COLOR: #336600; TEXT-DECORATION: none
+}
+.title2 A:hover {
+	COLOR: #339933; TEXT-DECORATION: none
+}
+.title1 A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.title1 A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.title1 A:hover {
+	COLOR: #ffff00; TEXT-DECORATION: none
+}
+.content4 {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 19px; FONT-FAMILY: "Verdana", "宋体"
+}
+.content4 A:link {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.content4 A:visited {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.content4 A:hover {
+	COLOR: #336600; TEXT-DECORATION: underline
+}
+.title A:link {
+	COLOR: #009900; TEXT-DECORATION: none
+}
+.title A:visited {
+	COLOR: #009900; TEXT-DECORATION: none
+}
+.title A:hover {
+	COLOR: #006600; TEXT-DECORATION: none
+}
